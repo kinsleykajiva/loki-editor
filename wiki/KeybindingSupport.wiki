@@ -1,4 +1,4 @@
-#summary A summary of the our ability to create keyboard shortcuts by browser and OS
+#summary A summary of our ability to create keyboard shortcuts by browser and OS
 #labels Audience-Developers
 
 As described in [http://code.google.com/p/loki-editor/issues/detail?id=28 issue 28], using our current (2.1) implementation, we are not able to trap the accelerator key combinations to trigger our editing functions under all browsers. This document details the support.
