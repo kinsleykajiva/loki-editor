@@ -1,5 +1,5 @@
 #summary A log of what changed in Loki in each release
-#labels Audience-Users,Audience-Installers
+#labels Audience-Users,Audience-Installers,Featured
 
 ==Loki 2.0 Beta 5 _(Not yet released.)_==
   * When linking to an existing item, anchors now appear in the order in which they appear in the item, not in alphabetical order. ([http://code.google.com/p/loki-editor/issues/detail?id=50 #50])
