@@ -1,0 +1,30 @@
+#summary A log of what changed in Loki in each release
+#labels Audience-Users,Audience-Installers
+
+==Loki 2.0 Beta 5 _(Not yet released.)_==
+  * When linking to an existing item, anchors now appear in the order in which they appear in the item, not in alphabetical order. ([http://code.google.com/p/loki-editor/issues/detail?id=50 #50])
+  * Fixed a bug where the link dialog would sometimes not load the list of existing items. ([http://code.google.com/p/loki-editor/issues/detail?id=52 #52])
+  * Fixed a bug where containers that should only contain either zero or two or more paragraphs were cleaned up if they only contained a single paragraph.([http://code.google.com/p/loki-editor/issues/detail?id=48 #48])
+  * The PHP helper no longer relies on the SCRIPT_URI server variable, which is not always available. ([http://code.google.com/p/loki-editor/issues/detail?id=53 #53])
+
+
+==Loki 2.0 Beta 4 _(January 19, 2008)_==
+  * The new link dialog will now default to displaying the tab that was last used to create a link. ([http://code.google.com/p/loki-editor/issues/detail?id=37 #37])
+  * Pressing Enter/Return within a dialog now submits it (unless the cursor is in a position where Enter does something special, like selecting a dropdown item). ([http://code.google.com/p/loki-editor/issues/detail?id=38 #38])
+  * The link dialog now allows the user to manually enter in an anchor name when the list of anchors can not be determined. ([http://code.google.com/p/loki-editor/issues/detail?id=19 #19])
+  * A button was added to the toolbar that forces Loki to clean up the editing document when it is pressed. ([http://code.google.com/p/loki-editor/issues/detail?id=56 #56])
+  * Loki can now always cleanup pasted content, even if the user uses the browser's menu to do so or otherwise bypasses Loki's clipboard capabilities. ([http://code.google.com/p/loki-editor/issues/detail?id=54 #54])
+  * Loki now better enforces proper HTML document structure. ([http://code.google.com/p/loki-editor/issues/detail?id=55 #55])
+  * The above cleanup changes fix some bizarre Mozilla behavior that occurs when plain text with line breaks is pasted in. ([http://code.google.com/p/loki-editor/issues/detail?id=8 #8])
+  * Error messages are now cleared when the retry link is clicked. ([http://code.google.com/p/loki-editor/issues/detail?id=25 #25])
+  * Loki can now be configured to allow changes to the size of an image made using the browser's controls to be preserved when the document is saved. ([http://code.google.com/p/loki-editor/issues/detail?id=27 #27])
+  * Illegally self-nested HTML elements (e.g. a `B` tag within another `B` tag) are now cleaned up. ([http://code.google.com/p/loki-editor/issues/detail?id=29 #29])
+  * Loki now cleans up unnecessary `BR` tags that are the last children of their parents. ([http://code.google.com/p/loki-editor/issues/detail?id=39 #39])
+  * The labels on the indent and outdent buttons were changed to be more friendly and informative. ([http://code.google.com/p/loki-editor/issues/detail?id=43 #43])
+
+
+==Loki 2.0 Beta 3 _(December 19, 2007)_==
+  * Fixed a bug that made it impossible to link to an anchor on the item being edited. ([http://code.google.com/p/loki-editor/issues/detail?id=4 #4])
+  * The link dialog no longer displays the last existing item you linked to as the default when the user goes to create a new link to an existing item. ([http://code.google.com/p/loki-editor/issues/detail?id=5 #5])
+  * Directly editing anchors is now possible. ([http://code.google.com/p/loki-editor/issues/detail?id=13 #13])
+  * Loki no longer replaces special punctuation characters with ASCII equivalents. ([http://code.google.com/p/loki-editor/issues/detail?id=14 #14])
