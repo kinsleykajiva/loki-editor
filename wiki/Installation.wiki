@@ -1,0 +1,4 @@
+#summary Instructions for installing Loki.
+#labels Audience-Installers,Phase-Deploy
+
+This document is not yet available; for now, consult the (limited) information given in the `readme.txt` file in the Loki distribution.
