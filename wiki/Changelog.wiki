@@ -1,6 +1,11 @@
 #summary A log of what changed in Loki in each release
 #labels Audience-Users,Audience-Installers,Featured
 
+==Loki 2.0 Release Candidate 2 _(Not yet released.)_==
+Fixed two critical bugs in RC1:
+  * Line break elements were being removed when they were at the end of inline elements (instead of just when they occurred at the end of blocks). ([http://code.google.com/p/loki-editor/issues/detail?id=58 #58])
+  * Content was being lost from multi-paragraph containers that only contained a sole paragraph during cleanup. ([http://code.google.com/p/loki-editor/issues/detail?id=59 #59])
+
 ==Loki 2.0 Release Candidate 1 _(January 29, 2008)_==
   * When linking to an existing item, anchors now appear in the order in which they appear in the item, not in alphabetical order. ([http://code.google.com/p/loki-editor/issues/detail?id=50 #50])
   * Fixed a bug where the link dialog would sometimes not load the list of existing items. ([http://code.google.com/p/loki-editor/issues/detail?id=52 #52])
