@@ -1,7 +1,7 @@
 #summary A log of what changed in Loki in each release
 #labels Audience-Users,Audience-Installers,Featured
 
-==Loki 2.0 Release Candidate 2 _(Not yet released.)_==
+==Loki 2.0 Release Candidate 2 _(February 5, 2008)_==
 A number of important issues were fixed over RC1.
   * We now display a preemptive message explaining the enhanced privileges needed for clipboard operations on Gecko browsers. ([http://code.google.com/p/loki-editor/issues/detail?id=31 #31])
   * Line break elements were being removed when they were at the end of inline elements (instead of just when they occurred at the end of blocks). ([http://code.google.com/p/loki-editor/issues/detail?id=58 #58])
