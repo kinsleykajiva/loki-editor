@@ -3,6 +3,7 @@
 
 ==Loki 2.0 Release Candidate 2 _(Not yet released.)_==
 A number of important issues were fixed over RC1.
+  * We now display a preemptive message explaining the enhanced privileges needed for clipboard operations on Gecko browsers. ([http://code.google.com/p/loki-editor/issues/detail?id=31 #31])
   * Line break elements were being removed when they were at the end of inline elements (instead of just when they occurred at the end of blocks). ([http://code.google.com/p/loki-editor/issues/detail?id=58 #58])
   * Content was being lost from multi-paragraph containers that only contained a sole paragraph during cleanup. ([http://code.google.com/p/loki-editor/issues/detail?id=59 #59])
   * Fixed an issue with cleanup of BR tags when switching from source view. ([http://code.google.com/p/loki-editor/issues/detail?id=60 #60])
