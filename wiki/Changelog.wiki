@@ -2,9 +2,11 @@
 #labels Audience-Users,Audience-Installers,Featured
 
 ==Loki 2.0 Release Candidate 2 _(Not yet released.)_==
-Fixed two critical bugs in RC1:
+A number of important issues were fixed over RC1.
   * Line break elements were being removed when they were at the end of inline elements (instead of just when they occurred at the end of blocks). ([http://code.google.com/p/loki-editor/issues/detail?id=58 #58])
   * Content was being lost from multi-paragraph containers that only contained a sole paragraph during cleanup. ([http://code.google.com/p/loki-editor/issues/detail?id=59 #59])
+  * Fixed an issue with cleanup of BR tags when switching from source view. ([http://code.google.com/p/loki-editor/issues/detail?id=60 #60])
+  * Running cut or copy on an empty selection was clearing the clipboard. ([http://code.google.com/p/loki-editor/issues/detail?id=62 #62])
 
 ==Loki 2.0 Release Candidate 1 _(January 29, 2008)_==
   * When linking to an existing item, anchors now appear in the order in which they appear in the item, not in alphabetical order. ([http://code.google.com/p/loki-editor/issues/detail?id=50 #50])
