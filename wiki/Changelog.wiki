@@ -1,6 +1,21 @@
 #summary A log of what changed in Loki in each release
 #labels Audience-Users,Audience-Installers,Featured
 
+
+==Loki 2.0 Release Candidate 3 _(June 26, 2008)_==
+  * Improved stability of Loki's handling of the delete and backspace keys. ([http://code.google.com/p/loki-editor/issues/detail?id=66 #66])
+  * Made the handling of externally-generated tables without `thead`s much less intrusive. ([http://code.google.com/p/loki-editor/issues/detail?id=81 #81])
+  * Fixed up the behavior of the buttons for removing horizontal rules. ([http://code.google.com/p/loki-editor/issues/detail?id=67 #67])
+  * Fixed an ECMAScript syntax error. ([http://code.google.com/p/loki-editor/issues/detail?id=73 #73])
+  * Improved the cleanup of nested paragraphs. ([http://code.google.com/p/loki-editor/issues/detail?id=74 #74])
+  * Fixed the cleanup of `param` tags; they are no longer wrapped in paragraphs. ([http://code.google.com/p/loki-editor/issues/detail?id=78 #78])
+  * Fixed the cell properties dialog. ([http://code.google.com/p/loki-editor/issues/detail?id=80 #80])
+  * Loki no longer includes references to stylesheets from the original developers' website. ([http://code.google.com/p/loki-editor/issues/detail?id=18 #18])
+  * PHP helper:
+    * The `add_document_style_sheets` method now properly accepts single CSS filenames instead of just arrays of them. ([http://code.google.com/p/loki-editor/issues/detail?id=71 #71])
+    * Removed all use of static method calls for PHP5 compatibility. ([http://code.google.com/p/loki-editor/issues/detail?id=72 #72])
+    * Improved the stability of the code that serializes Loki's options, so that no combination will produce invalid !JavaScript. ([http://code.google.com/p/loki-editor/issues/detail?id=83 #83])
+
 ==Loki 2.0 Release Candidate 2 _(February 5, 2008)_==
 A number of important issues were fixed over RC1.
   * We now display a preemptive message explaining the enhanced privileges needed for clipboard operations on Gecko browsers. ([http://code.google.com/p/loki-editor/issues/detail?id=31 #31])
