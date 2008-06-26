@@ -7,7 +7,7 @@ Some settings are actually required (currently only *base_uri*); the names of th
 
 || *Name* || *Type* || *Description * ||
 || allowable_tags || array || An array of allowed HTML tags, given in upper case. Loki will remove any tags from the document that do not appear in this list. If this is not specified, a fairly permissive default list that is built-in to Loki will be used. ||
-|| *base_uri* || string || The URL of the Loki folder. Loki uses this to pull in icons, CSS files, etc. ||
+|| *base_uri* || string || _Required._ The URL of the Loki folder. Loki uses this to pull in icons, CSS files, etc. ||
 || default_site_regexp || regexp || A regular expression that matches the default site to link to. For more information, see [CMSIntegration the article on CMS integration]. ||
 || default_type_regexp || regexp || A regular expression that matches the default type that can be linked to. For more information, see [CMSIntegration the article on CMS integration]. ||
 || disallow_image_sizes || boolean || Most browsers allow images in the document to be resized, but if `disallow_image_sizes` is set to true, the edited sizes will be stripped out when the document is saved. Defaults to false. ||
