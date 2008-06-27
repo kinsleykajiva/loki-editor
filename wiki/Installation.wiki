@@ -1,7 +1,7 @@
 #summary Instructions for installing Loki.
 #labels Featured,Phase-Deploy,Audience-Installers
 
-Installing Loki is a very simple process. Follow these instructions to integrate Loki with your web site or application.
+Installing Loki is a very simple process. Follow these instructions to integrate Loki with your web site or application. If you have questions or run into any difficulty, you can post a message to [http://groups.google.com/group/loki-installers the Loki installers discussion group], where you will be answered by a developer.
 
 ===1. Installing files===
 First, the Loki files must be uploaded to and extracted on your web server. Due to browser security features, the entire Loki folder _must_ be placed in an area that will be served from the same host and port as the page(s) on which you want Loki to appear.
