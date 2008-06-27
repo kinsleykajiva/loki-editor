@@ -1,4 +1,14 @@
 #summary Instructions for installing Loki.
 #labels Audience-Installers,Phase-Deploy
 
-This document is not yet available; for now, consult the (limited) information given in the `readme.txt` file in the Loki distribution.
+Installing Loki is a very simple process. Follow these instructions to integrate Loki with your web site or application.
+
+===1. Installing files===
+First, the Loki files must be uploaded to and extracted on your web server. Due to browser security features, the entire Loki folder _must_ be placed in an area that will be served from the same host and port as the page(s) on which you want Loki to appear.
+  # Obtain a packaged version of Loki from [http://code.google.com/p/loki-editor/downloads/list the downloads section]. Do not download a source package.
+  # Loki is distributed in BZip2-compressed tarballs. If you have direct (e.g. shell, terminal services) access to your web server, you can simply extract the archive directly in place using standard UNIX utilities. If you only have FTP access to your server, you must first extract the `loki-###.tar.bz2` file on your own computer, and then upload the resulting folder. Windows users will first need to download a utility like [http://www.7-zip.org/ 7zip] or [http://www.win-rar.com WinRAR] to open the file.
+
+===2. Configuring the server===
+To enable clipboard features on Mozilla browsers (e.g. Firefox), Loki contains some signed code within a JAR archive, located at `auxil/privileged.jar` within the Loki folder. For [http://www.mozilla.org/security/announce/2007/mfsa2007-37.html security reasons], Mozilla browsers will not accept this file unless it is served with an appropriate MIME type (such as `application/java-archive`) in the `Content-Type` header. As this restriction exists to prevent users from hosting malicious signed JAR files on unsuspecting sites, no servers come pre-configured to serve them with this content type.
+
+If you are using [http://httpd.apache.org Apache], you probably won't need to configure anything, as Loki comes with an appropriate configuration directive already applied to the  `auxil` folder. For other servers, consult the documentation to find out how to set MIME type associations.
