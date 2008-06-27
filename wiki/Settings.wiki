@@ -1,7 +1,7 @@
 #summary A reference of Loki settings
 #labels Audience-Installers
 
-Loki has many settings to customize its behavior that can be passed to `UI.Loki.init()`. A reference table is given below; for information how to pass these settings in or set up Loki in general, see [Installation the article on installing Loki].
+Loki has many settings to customize its behavior that can be passed to `UI.Loki.init()`. A reference table is given below; for information how to pass these settings in, see [Initialization the article on initializing Loki].
 
 || *Name* || *Type* || *Description * ||
 || allowable_tags || array || An array of allowed HTML tags, given in upper case. Loki will remove any tags from the document that do not appear in this list. If this is not specified, a fairly permissive default list that is built-in to Loki will be used. ||
