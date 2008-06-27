@@ -3,11 +3,9 @@
 
 Loki has many settings to customize its behavior that can be passed to `UI.Loki.init()`. A reference table is given below; for information how to pass these settings in or set up Loki in general, see [Installation the article on installing Loki].
 
-Some settings are actually required (currently only *base_uri*); the names of these settings are printed in *bold*.
-
 || *Name* || *Type* || *Description * ||
 || allowable_tags || array || An array of allowed HTML tags, given in upper case. Loki will remove any tags from the document that do not appear in this list. If this is not specified, a fairly permissive default list that is built-in to Loki will be used. ||
-|| *base_uri* || string || _Required._ The URL of the Loki folder. Loki uses this to pull in icons, CSS files, etc. ||
+|| base_uri || string || The URL of the Loki folder. Loki uses this to pull in icons, CSS files, etc. Loki will attempt to detect the correct value for this automatically, but in some cases it may need to be given explicitly. ||
 || default_site_regexp || regexp || A regular expression that matches the default site to link to. For more information, see [CMSIntegration the article on CMS integration]. ||
 || default_type_regexp || regexp || A regular expression that matches the default type that can be linked to. For more information, see [CMSIntegration the article on CMS integration]. ||
 || disallow_image_sizes || boolean || Most browsers allow images in the document to be resized, but if `disallow_image_sizes` is set to true, the edited sizes will be stripped out when the document is saved. Defaults to false. ||
