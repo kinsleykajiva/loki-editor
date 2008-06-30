@@ -7,9 +7,10 @@
     * There is a new public interface (contained within the new `Loki` object) for creating instances of the Loki editor. The new interface hides some additional implementation details from the user, and makes it easier to create Loki instances for multiple `textarea`s. ([http://code.google.com/p/loki-editor/issues/detail?id=85 #85])
     * In cases where the Loki distribution archive is installed normally (i.e. the filename of the `loki.js` script is not changed), Loki can determine the URL to its files automatically. ([http://code.google.com/p/loki-editor/issues/detail?id=84 #84])
     * It is no longer necessary to separately give the locations of the clipboard helper files; they will be found using the normal Loki base URI. ([http://code.google.com/p/loki-editor/issues/detail?id=86 #86])
-  * Two major bugs have been fixed:
+  * Three major bugs have been fixed:
     * There was an issue that prevented Loki instances from being created if the default site and type regular expressions were not specified. ([http://code.google.com/p/loki-editor/issues/detail?id=87 #87])
     * The link dialog was not appearing if [CMSIntegration CMS integration] was not being used. ([http://code.google.com/p/loki-editor/issues/detail?id=88 #88])
+    * The PHP helper should no longer mangle the default site and type regular expressions. ([http://code.google.com/p/loki-editor/issues/detail?id=75 #75])
   * The toolbar icons have been replaced by new ones based on the [http://www.famfamfam.com/lab/icons/silk/ Silk set]. ([http://code.google.com/p/loki-editor/issues/detail?id=9 #9])
 
 ==Loki 2.0 Release Candidate 3 _(June 26, 2008)_==
