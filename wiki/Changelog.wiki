@@ -8,10 +8,12 @@
     * In cases where the Loki distribution archive is installed normally (i.e. the filename of the `loki.js` script is not changed), Loki can determine the URL to its files automatically. ([http://code.google.com/p/loki-editor/issues/detail?id=84 #84])
     * It is no longer necessary to separately give the locations of the clipboard helper files; they will be found using the normal Loki base URI. ([http://code.google.com/p/loki-editor/issues/detail?id=86 #86])
     * Loki now gives access to its version number in the `Loki.version` string.
-  * Three major bugs have been fixed:
+  * Four major bugs have been fixed:
     * There was an issue that prevented Loki instances from being created if the default site and type regular expressions were not specified. ([http://code.google.com/p/loki-editor/issues/detail?id=87 #87])
     * The link dialog was not appearing if [CMSIntegration CMS integration] was not being used. ([http://code.google.com/p/loki-editor/issues/detail?id=88 #88])
+    * The contextual menu no longer opens at an incorrect position if the editing document has been scrolled. ([http://code.google.com/p/loki-editor/issues/detail?id=77 #77])
     * The PHP helper should no longer mangle the default site and type regular expressions. ([http://code.google.com/p/loki-editor/issues/detail?id=75 #75])
+  * The behavior of Loki's automatic cleanup under Firefox 2 was changed, eliminating some serious performance issues. ([http://code.google.com/p/loki-editor/issues/detail?id=76 #76])
   * The toolbar icons have been replaced by new ones based on the [http://www.famfamfam.com/lab/icons/silk/ Silk set]. ([http://code.google.com/p/loki-editor/issues/detail?id=9 #9])
 
 ==Loki 2.0 Release Candidate 3 _(June 26, 2008)_==
