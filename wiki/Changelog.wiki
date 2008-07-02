@@ -2,7 +2,7 @@
 #labels Audience-Users,Audience-Installers,Featured
 
 
-==Loki 2.0 Release Candidate 4 _(Not yet released)_==
+==Loki 2.0 Release Candidate 4 _(July 2, 2008)_==
   * Loki is now much easier to use without using a helper script:
     * There is a new public interface (contained within the new `Loki` object) for creating instances of the Loki editor. The new interface hides some additional implementation details from the user, and makes it easier to create Loki instances for multiple `textarea`s. ([http://code.google.com/p/loki-editor/issues/detail?id=85 #85])
     * In cases where the Loki distribution archive is installed normally (i.e. the filename of the `loki.js` script is not changed), Loki can determine the URL to its files automatically. ([http://code.google.com/p/loki-editor/issues/detail?id=84 #84])
