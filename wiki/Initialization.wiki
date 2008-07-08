@@ -1,5 +1,5 @@
 #summary Details on how to initialize Loki.
-#labels Phase-Deploy
+#labels Phase-Deploy,Audience-Installers
 
 While [Installation the main installation article] has some useful examples on how to initialize Loki, it doesn't cover every possibility. Installers with some !JavaScript experience can use this more technical reference to perform more customization.
 
