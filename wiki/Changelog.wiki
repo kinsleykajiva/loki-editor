@@ -1,6 +1,10 @@
 #summary A log of what changed in Loki in each release
 #labels Audience-Users,Audience-Installers,Featured
 
+==Loki 2.0 Release Candidate 5 _(Not yet released)_==
+  * Icons now properly appear with alpha blending in IE6. ([http://code.google.com/p/loki-editor/issues/detail?id=9 #9])
+  * The contextual menu no longer disappears right after appearing in Firefox 3. ([http://code.google.com/p/loki-editor/issues/detail?id=92 #92])
+  * Dialog contents no longer become visible before styles are applied to the window. ([http://code.google.com/p/loki-editor/issues/detail?id=93 #93])
 
 ==Loki 2.0 Release Candidate 4 _(July 2, 2008)_==
   * Loki is now much easier to use without using a helper script:
