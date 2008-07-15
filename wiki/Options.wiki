@@ -1,5 +1,5 @@
 #summary Describes the available editing options
-#labels Audience-Installers
+#labels Audience-Installers,Phase-Deploy
 
 Loki includes many different editing options that can be enabled or disabled at will. The desired options are given as the `options` [Settings setting].
 
