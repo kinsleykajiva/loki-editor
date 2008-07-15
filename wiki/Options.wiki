@@ -5,7 +5,7 @@ Loki includes many different editing options that can be enabled or disabled at 
 
 Two default sets of options are included in Loki: `default`, a slightly-limited set of features that are suitable for most users; and `power`, a larger set of features suitable for power users. Individual options can be added and subtracted from these sets by appending their identifiers to the end, prefixed with a `+` or a `-` as desired.
 
-For instructions on how to give this option string to Loki, see [Initialization the initialization article].
+For instructions on how to give this option string to Loki, see [Installation the main installation article].
 
 ===Examples===
 || *Selector* || *Description* ||
