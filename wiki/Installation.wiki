@@ -42,7 +42,7 @@ The following code will replace all textareas on a page with Loki editors, using
 </script>
 }}}
 
-To replace all of the textareas with more fullly-featured editors, you can tweak the Loki [Options options]:
+To create editors with a different set of features than the default, you can tweak the Loki [Options options]. For example, to replace all textareas with editors that include all "power-user" features except for anchors, you can write:
 {{{
 <script type="text/javascript" charset="utf-8">
    Loki.convert_all_textareas({options: "power - anchors"});
