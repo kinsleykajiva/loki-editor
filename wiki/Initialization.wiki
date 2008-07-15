@@ -32,5 +32,7 @@ Loki makes available a global object named `Loki` that you can use to create edi
 ===Settings===
 Loki [Settings settings] are given in a normal !JavaScript object, where the keys and values of the object correspond respectively with the names of the settings and their desired values.
 
+The `options` setting is of particular importance, as it describes which editing features should be loaded. For more information, see [Options the options article].
+
 ===Callbacks===
 Because it is possible to call the `convert` functions before the page has finished loading (and thus before it is possible to actually create a Loki editor), the functions do not return the Loki editor objects themselves. If you need access to these objects, you can specify a callback function. When the editor is created, this function will be called with two arguments: the `UI.Loki` object as the first, and the textarea from which it was created as the second.
