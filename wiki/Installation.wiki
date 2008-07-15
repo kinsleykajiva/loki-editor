@@ -11,7 +11,7 @@ First, the Loki files must be uploaded to and extracted on your web server. Due 
   # Loki is distributed in BZip2-compressed tarballs. If you have direct (e.g. shell, terminal services) access to your web server, you can simply extract the archive directly in place using standard UNIX utilities. If you only have FTP access to your server, you must first extract the `loki-###.tar.bz2` file on your own computer, and then upload the resulting folder. Windows users will first need to download a utility like [http://www.7-zip.org/ 7zip] or [http://www.win-rar.com WinRAR] to open the file.
 
 ===2. Configuring the server===
-To enable clipboard features on Mozilla browsers (e.g. Firefox), Loki contains some signed code within a JAR archive, located at `auxil/privileged.jar` within the Loki folder. For [http://www.mozilla.org/security/announce/2007/mfsa2007-37.html security reasons], Mozilla browsers will not accept this file unless it is served with an appropriate MIME type (such as `application/java-archive`) in the `Content-Type` header. As this restriction exists to prevent users from hosting malicious signed JAR files on unsuspecting sites, no servers come pre-configured to serve them with this content type.
+To enable clipboard features on Mozilla browsers (e.g., Firefox), Loki contains some signed code within a JAR archive, located at `auxil/privileged.jar` within the Loki folder. For [http://www.mozilla.org/security/announce/2007/mfsa2007-37.html security reasons], Mozilla browsers will not accept this file unless it is served with an appropriate MIME type (such as `application/java-archive`) in the `Content-Type` header. As this restriction exists to prevent users from hosting malicious signed JAR files on unsuspecting sites, no servers come pre-configured to serve them with this content type.
 
 If you are using [http://httpd.apache.org Apache], you probably won't need to configure anything, as Loki comes with an appropriate configuration directive already applied to the  `auxil` folder. For other servers, consult the documentation to find out how to set MIME type associations.
 
@@ -42,10 +42,17 @@ The following code will replace all textareas on a page with Loki editors, using
 </script>
 }}}
 
-To replace all of the textareas with full-featured editors, you can tweak the Loki [Settings settings] to request all available options:
+To replace all of the textareas with more fullly-featured editors, you can tweak the Loki [Options options]:
 {{{
 <script type="text/javascript" charset="utf-8">
-   Loki.convert_all_textareas({options: 'all'});
+   Loki.convert_all_textareas({options: "power - anchors"});
+</script>
+}}}
+
+There are several other [Settings settings] that can be edited. To create editors with power-user options that sanitize unsecured images when Loki is served over HTTP, you can write:
+{{{
+<script type="text/javascript" charset="utf-8">
+   Loki.convert_all_textareas({options: "power", sanitize_unsecured: true});
 </script>
 }}}
 
@@ -53,21 +60,21 @@ To replace all of the textareas with full-featured editors, you can tweak the Lo
 If you need more flexibility, you can only have Loki replace the textareas that have certain classes. For example, to replace all of the textareas that have the class `rich` with full-featured editors, you can write:
 {{{
 <script type="text/javascript" charset="utf-8">
-   Loki.convert_textareas_by_class('rich', {options: 'all'});
+   Loki.convert_textareas_by_class("rich", {options: "power"});
 </script>
 }}}
 
 You can match multiple classes by separating them with spaces, just as you can do in the HTML `class` attribute itself. To replace all of the textareas that are classed both as `rich` and `loki`, you can write:
 {{{
 <script type="text/javascript" charset="utf-8">
-   Loki.convert_textareas_by_class('rich loki', {options: 'all'});
+   Loki.convert_textareas_by_class("rich loki", {options: "power"});
 </script>
 }}}
 
 ====Replacing specific textareas====
-You can replace specific textareas based on their ID's. For example, to replace the textareas with ID's "editor" and "comment", you can write:
+You can replace specific textareas based on their ID"s. For example, to replace the textareas with ID"s "editor" and "comment", you can write:
 {{{
 <script type="text/javascript" charset="utf-8">
-   Loki.convert_textareas(['editor', 'comment'], {options: 'all'});
+   Loki.convert_textareas(["editor", "comment"], {options: "default + tables"});
 </script>
 }}}
