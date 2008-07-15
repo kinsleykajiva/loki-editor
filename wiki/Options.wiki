@@ -14,10 +14,9 @@ For instructions on how to give this option string to Loki, see [Initialization 
 || `"power - anchors - tables"` || Includes all the items in the power user set except for anchors and tables. ||
 || `"power - blockquotes + underline - source"` || Includes all the items in the power user set except for blockquotes and source code editing, and adds in underlining. ||
 
-
-===Option Reference===
 All of the individual Loki options are listed below.
 
+===Option Reference===
 || *Identifier* || *Description* || *In `default`?* || *In `power`?* ||
 || `bold` || Allows the user to make text bold. || Yes || Yes ||
 || `italic` || Allows the user to italicize text. || Yes || Yes ||
