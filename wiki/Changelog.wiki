@@ -1,7 +1,7 @@
 #summary A log of what changed in Loki in each release
 #labels Audience-Users,Audience-Installers,Featured
 
-==Loki 2.0 Release Candidate 5 _(Not yet released)_==
+==Loki 2.0 Release Candidate 5 _(July 16, 2008)_==
   * Revamped the [Options options system]. The public interface for common cases has not changed, although we now recommend the use of the new `"power"` set in place of `"all"`. ([http://code.google.com/p/loki-editor/issues/detail?id=102 #102])
   * Icons now properly appear with alpha blending in IE6. ([http://code.google.com/p/loki-editor/issues/detail?id=9 #9])
   * Fixed image editing under Firefox 3. ([http://code.google.com/p/loki-editor/issues/detail?id=95 #95])
