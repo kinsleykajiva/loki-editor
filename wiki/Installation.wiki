@@ -70,7 +70,7 @@ You can match multiple classes by separating them with spaces, just as you can d
 }}}
 
 ====Replacing specific textareas====
-You can replace specific textareas based on their ID"s. For example, to replace the textareas with ID"s "editor" and "comment", you can write:
+You can replace specific textareas based on their ID's. For example, to replace the textareas with ID's "editor" and "comment", you can write:
 {{{
 <script type="text/javascript" charset="utf-8">
    Loki.convert_textareas(["editor", "comment"], {options: "default + tables"});
