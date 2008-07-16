@@ -2,9 +2,18 @@
 #labels Audience-Users,Audience-Installers,Featured
 
 ==Loki 2.0 Release Candidate 5 _(Not yet released)_==
+  * Revamped the [Options options system]. The public interface for common cases has not changed, although we now recommend the use of the new `"power"` set in place of `"all"`. ([http://code.google.com/p/loki-editor/issues/detail?id=102 #102])
   * Icons now properly appear with alpha blending in IE6. ([http://code.google.com/p/loki-editor/issues/detail?id=9 #9])
+  * Fixed image editing under Firefox 3. ([http://code.google.com/p/loki-editor/issues/detail?id=95 #95])
+  * Content that is pasted into the editing document now always receives all cleanups. ([http://code.google.com/p/loki-editor/issues/detail?id=96 #96])
+  * Worked around the tendency of Mozilla to rewrite image URL's relative to the editor's location. ([http://code.google.com/p/loki-editor/issues/detail?id=99 #99])
+  * Fixed an issue where images could not be inserted under Internet Explorer if the cursor was in a text node. ([http://code.google.com/p/loki-editor/issues/detail?id=100 #100])
   * The contextual menu no longer disappears right after appearing in Firefox 3. ([http://code.google.com/p/loki-editor/issues/detail?id=92 #92])
   * Dialog contents no longer become visible before styles are applied to the window. ([http://code.google.com/p/loki-editor/issues/detail?id=93 #93])
+  * Made the label of the "Edit source" button somewhat more clear. ([http://code.google.com/p/loki-editor/issues/detail?id=94 #94])
+  * Fixed a serious bug in our IE compatibility layer that led to various strange behaviors. ([http://code.google.com/p/loki-editor/issues/detail?id=97 #97])
+  * The (obsolete) PHP helper now adds the `charset` attribute to all script tags that it generates. ([http://code.google.com/p/loki-editor/issues/detail?id=101 #101])
+  * Various stability fixes to internal code.
 
 ==Loki 2.0 Release Candidate 4 _(July 2, 2008)_==
   * Loki is now much easier to use without using a helper script:
