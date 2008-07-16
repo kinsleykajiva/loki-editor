@@ -25,7 +25,7 @@ All of the individual Loki options are listed below.
 || `links` || Allows the user to insert links. || Yes || Yes ||
 || `clipboard` || Allows the user to cut, copy, and paste.^1^ || Yes || Yes ||
 || `align` || Allows the user to align paragraphs and blocks. || Yes || Yes ||
-|| `blockquotes` || Allows the user to user block quotations. || Yes || Yes ||
+|| `blockquotes` || Allows the user to use block quotations. || Yes || Yes ||
 || `lists` || Allows the user to use bulleted and numbered lists. || Yes || Yes ||
 || `find` || Allows the user to run find-and-replace. || Yes || Yes ||
 || `cleanup` || Allows the user to run a HTML cleanup at will. || Yes || Yes ||
