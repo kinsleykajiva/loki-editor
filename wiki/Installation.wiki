@@ -1,8 +1,6 @@
 #summary Instructions for installing Loki.
 #labels Featured,Phase-Deploy,Audience-Installers
 
-*Important note:* These directions are only valid for the upcoming release candidate 4 of Loki.
-
 Installing Loki is a very simple process. Follow these instructions to integrate Loki with your web site or application. If you have questions or run into any difficulty, you can post a message to [http://groups.google.com/group/loki-installers the Loki installers discussion group], where you will be answered by a developer.
 
 ===1. Installing files===
