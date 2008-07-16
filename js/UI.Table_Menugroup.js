@@ -122,6 +122,11 @@ UI.Table_Menugroup = function()
 			}
 		}
 
+		if ( this._table_helper.is_table_selected() )
+		{
+			menuitems.push( (new UI.Separator_Menuitem).init() );
+		}
+
 		return menuitems;
 	};
 };

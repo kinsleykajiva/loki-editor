@@ -17,6 +17,8 @@ if (!defined('LOKI_2_PATH')) {
 	}
 }
 
+include_once(LOKI_2_PHP_INC.'options.php'); // so we can get L_DEFAULT etc.
+
 /**
  * Second generation of the Loki XHTML editor
  *
@@ -64,6 +66,7 @@ class Loki2
 	var $_field_value;
 	var $_editor_id;
 	var $_editor_obj;
+	var $_user_is_admin;
 	var $_feeds = array();
 	var $_default_site_regexp = '';
 	var $_default_type_regexp = '';
@@ -78,9 +81,10 @@ class Loki2
 	 * @param	string	$field_name		  How Loki is identified within its containing form. This will become the name of the textarea that Loki creates
 	 *									  and therefore of the request variable received by the form's action.
 	 * @param	string	$field_value	  The HTML that Loki will initially be editing.
-	 * @param	string	$current_options  Indicates which buttons etc Loki should present to the user.
+	 * @param	string	$current_options  Indicates which buttons etc Loki should present to the user. For the possible values, see js/UI.Loki_Options.js
+	 * @param	boolean $user_is_admin	  Whether the user is an administrator. Administrators can get options normal users can't.
 	 */
-	function Loki2($field_name, $field_value='', $current_options=null)
+	function Loki2( $field_name, $field_value = '', $current_options = 'default', $user_is_admin = false, $debug = false )
 	{
 		if (!defined('LOKI_2_HTTP_PATH')) {
 			trigger_error('The constant LOKI_2_HTTP_PATH must be defined '.
@@ -101,6 +105,8 @@ class Loki2
 		$this->_set_field_value($field_value);
 		$this->_editor_id = uniqid('loki');
 		$this->_editor_obj = $this->_editor_id."_obj";
+		$this->_user_is_admin = $user_is_admin;
+		$this->_debug = $debug;
 	}
 
 	/**
@@ -181,6 +187,7 @@ class Loki2
 		<script type="text/javascript" language="javascript">
 		//document.domain = 'carleton.edu'; /// XXX: for testing; maybe remove later if not necessary
 		var <?php echo $id ?>;
+		var loki_debug = <?php echo $this->_debug ? 'true' : 'false' ?>; // set to false or remove when live
 		function <?php echo $onload ?>()
 		{
 			if (!UI || !Util) {
@@ -268,7 +275,7 @@ class Loki2
 					$path = $this->_asset_path.'loki.js';
 				}
 
-				echo '<script type="text/javascript" charset="utf-8" language="javascript" src="'.$path.'">',
+				echo '<script type="text/javascript" language="javascript" src="'.$path.'">',
 					"</script>\n";
 			} else if ($mode == 'debug') {
 				$files = $this->_get_js_files();
@@ -286,7 +293,7 @@ class Loki2
 						'helpers/php/loki_editor_scripts.php';
 				}
 				
-				echo '<script type="text/javascript" src="'.$path.'" charset="utf-8">',
+				echo '<script type="text/javascript" src="'.$path.'">',
 					"</script>\n";
 			} else if ($mode == 'inline') {
 				$files = $this->_get_js_files();
@@ -294,7 +301,7 @@ class Loki2
 				if (!$files)
 					return false;
 				
-				echo '<script type="text/javascript" charset="utf-8">', "\n";
+				echo '<script type="text/javascript">', "\n";
 				foreach ($files as $filename) {
 					echo "\n// file $file \n\n";
 					readfile($base.$filename);
@@ -329,7 +336,7 @@ class Loki2
 	 */
 	function get_field_value()
 	{ 
-		return $this->_field_value;
+		return $this->_field_value; 
 	}
 
 	/**
@@ -381,30 +388,25 @@ class Loki2
 	
 	function _get_js_settings_object()
 	{
-		$options = $this->_current_options;
+		$options = (array) $this->_current_options;
+		if ($this->_user_is_admin)
+			$options[] = 'source';
 		
 		$s = new stdClass; // create an anonymous object
 		
-		if ($this->_asset_path)
-			$s->base_uri = $this->_asset_path;
-		if ($options)
-			$s->options = $options;
-		
+		$s->base_uri = $this->_asset_path;
+		$s->options = $options;
 		foreach (array('images', 'sites', 'finder') as $f) {
-			if (!empty($this->_feeds[$f]))
-			$s->{$f.'_feed'} = $this->_feeds[$f];
+			$s->{$f.'_feed'} = 	(!empty($this->_feeds[$f]))
+				? $this->_feeds[$f]
+				: null;
 		}
-		if ($this->_default_site_regexp)
-			$s->default_site_regexp = $this->_default_site_regexp;
-		if ($this->_default_type_regexp)
-			$s->default_type_regexp = $this->_default_type_regexp;
+		$s->default_site_regexp = $this->_default_site_regexp;
+		$s->default_type_regexp = $this->_default_type_regexp;
 		$s->use_xhtml = true;
-		if ($this->_sanitize_unsecured)
-			$s->sanitize_unsecured = $this->_sanitize_unsecured;
-		if ($this->_document_style_sheets)
-			$s->document_style_sheets = $this->_document_style_sheets;
-		if ($this->_allowable_tags)
-			$s->allowable_tags = $this->_allowable_tags;
+		$s->sanitize_unsecured = $this->_sanitize_unsecured;
+		$s->document_style_sheets = $this->_document_style_sheets;
+		$s->allowable_tags = $this->_allowable_tags;
 		
 		return $s;
 	}

@@ -173,7 +173,7 @@ Util.Range.get_boundaries = function get_range_boundaries(rng)
 					
 					// Found it! It's an element!
 					return {
-						container: parent,
+						node: parent,
 						offset: Util.Node.get_offset(child)
 					}
 				} else if (child.nodeType != Util.Node.TEXT_NODE) {
@@ -191,7 +191,7 @@ Util.Range.get_boundaries = function get_range_boundaries(rng)
 				
 				// Found it!
 				return {
-					container: child,
+					node: child,
 					offset: offset - travelled
 				};
 			}
@@ -224,77 +224,7 @@ Util.Range.get_boundaries = function get_range_boundaries(rng)
 		start: get_boundary('start'),
 		end: get_boundary('end')
 	};
-};
-
-/**
- * Finds matching elements within the range.
- * @param {Range} rng the range to search in
- * @param {Function|String} [matcher] either a matching function or a tag name.
- * @param {Boolean} [up=false] also search up the tree from the range's common
- *        ancestor. It is an error to set this option if there is no matcher.
- * @throws {Error} if up is true but there is no matcher
- * @return {HTMLElement[]} all found matching elements
- */
-Util.Range.find_nodes = function find_nodes_in_range(rng, matcher, up) {
-	function process_boundary(bound) {
-		return (bound.container.nodeType == Util.Node.TEXT_NODE)
-			? bound.container
-			: bound.container.childNodes[bound.offset];
-	}
-	
-	var bounds = Util.Range.get_boundaries(rng);
-	var matched_nodes = [];
-	var start = process_boundary(bounds.start);
-	var end = process_boundary(bounds.end);
-	var node;
-	var ancestor;
-	
-	if (!matcher && up) {
-		throw new Error('Cannot find nodes that are ancestors of the range ' +
-			'if no matcher is selected.');
-	}
-	
-	function next_node(n) {
-		if (n.hasChildNodes()) {
-			n = n.firstChild;
-		} else if (n.nextSibling) {
-			n = n.nextSibling;
-		} else if (n.parentNode && n.parentNode.nextSibling) {
-			n = n.parentNode.nextSibling;
-		} else {
-			n = null;
-		}
-		
-		return (n != end) ? n : null;
-	}
-	
-	if (typeof(matcher) == 'string')
-		matcher = Util.Node.curry_is_tag(matcher);
-	else if (!matcher)
-		matcher = Util.Function.optimist;
-	else if (typeof(matcher) != 'function')
-		throw new TypeError('Invalid matcher.');
-	
-	for (node = start; node; node = next_node(node)) {
-		if (matcher(node))
-			matched_nodes.push(node);
-	}
-	
-	if (up) {
-		ancestor = Util.Range.get_common_ancestor(rng);
-		if (!ancestor)
-			return matched_nodes;
-		if (ancestor == start || ancestor == end)
-			ancestor = ancestor.parentNode;
-		end = start.ownerDocument;
-		for (node = ancestor; node && node != end; node = node.parentNode) {
-			if (matcher(node))
-				matched_nodes.push(node);
-		}
-	}
-	
-	return matched_nodes;
-};
+}
 
 /**
  * Returns the start container of the given range (if
@@ -487,8 +417,7 @@ Util.Range.insert_node = function insert_node_in_range(rng, node)
 		if (bounds.start.container.nodeType == Util.Node.TEXT_NODE) {
 			// Inserting the node into a text node; split it at the insertion
 			// point.
-			bounds.start.container.splitText(bounds.start.offset);
-			point = bounds.start.container.nextSibling;
+			point = bounds.start.container.splitText(bounds.start.offset);
 			
 			// Now the node can be inserted between the two text nodes.
 			bounds.start.container.parentNode.insertBefore(node, point);
@@ -635,9 +564,6 @@ Util.Range.get_nearest_ancestor_node =
 {
 	// XXX: Do we really want this? -Eric
 	var ancestor = Util.Range.get_start_container(rng);
-	
-	if (!ancestor)
-		return null;
 	
 	if (boolean_test(ancestor)) {
 		return ancestor;
@@ -895,16 +821,6 @@ Util.Range.compare_boundary_points =
 	} else {
 		throw new Util.Unsupported_Error("comparing two ranges' boundary " +
 			"points");
-	}
-};
-
-Util.Range.select_node = function range_select_node(rng, node)
-{
-	if (rng.selectNode) {
-		rng.selectNode(node);
-	} else {
-		Util.Range.set_start_before(rng, node);
-		Util.Range.set_start_after(rng, node);
 	}
 };
 

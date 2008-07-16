@@ -31,6 +31,8 @@ UI.Anchor_Menugroup = function()
 				label : 'Edit anchor',
 				listener : this._anchor_helper.open_dialog 
 			}) );
+
+			menuitems.push( (new UI.Separator_Menuitem).init() );
 		}
 
 		return menuitems;

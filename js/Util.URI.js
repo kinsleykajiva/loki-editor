@@ -71,7 +71,7 @@ Util.URI.parse = function parse_uri(uri)
 		password: get_match(authority_match, 4),
 		host: get_match(authority_match, 5),
 		port: (port ? Number(port) : port),
-		path: get_match(match, 5) || '/',
+		path: get_match(match, 5),
 		query: get_match(match, 7),
 		fragment: get_match(match, 9)
 	};
@@ -119,14 +119,11 @@ Util.URI.build_query = function build_query(variables)
  */
 Util.URI.build = function build_uri_from_parsed(parsed)
 {
-	var uri = '';
-	if (parsed.scheme)
-		uri = parsed.scheme + ':'
-	
+	var uri = parsed.scheme || '';
 	if (parsed.authority) {
-		uri += '//' + parsed.authority;
+		uri += '://' + parsed.authority;
 	} else if (parsed.host) {
-		uri += '//';
+		uri += '://';
 		if (parsed.user) {
 			uri += parsed.user;
 			if (parsed.password)
@@ -137,9 +134,6 @@ Util.URI.build = function build_uri_from_parsed(parsed)
 		uri += parsed.host;
 		if (parsed.port)
 			uri += ':' + parsed.port;
-	} else if (parsed.scheme) {
-		throw new Error('To build a URI with the scheme specified, the host ' +
-			'or authority must also be specified.');
 	}
 	
 	if (parsed.path)
@@ -178,13 +172,11 @@ Util.URI.append_to_query = function append_params_to_query(uri, params)
  */
 Util.URI.normalize = function normalize_uri(uri, base)
 {
-	var path_parts, i;
-	
 	if (typeof(base) == 'string') {
 		base = Util.URI.parse(base);
 	} else {
 		if (!base)
-			base = Util.URI.parse((window.top || window).location);
+			base = Util.URI.parse(window.location);
 		else if (Util.is_object(base))
 			base = Util.Object.clone(base);
 		else if (typeof(base) != 'object' || typeof(base.path) == 'undefined')
@@ -196,7 +188,7 @@ Util.URI.normalize = function normalize_uri(uri, base)
 	
 	if (typeof(uri) != 'string') {
 		if (uri.scheme === undefined)
-			throw new TypeError("Invalid URI object.");
+			throw TypeError();
 		uri = Util.Object.clone(uri);
 	} else {
 		uri = Util.URI.parse(uri);
@@ -211,28 +203,10 @@ Util.URI.normalize = function normalize_uri(uri, base)
 	
 	if (!uri.host)
 		uri.host = base.host;
-	uri.host = uri.host.toLowerCase();
 	
-	if (uri.path.charAt(0) != '/' && uri.host == base.host) {
+	if (uri.path.charAt(0) != '/') {
 		uri.path = base.path + uri.path;
 	}
-	
-	path_parts = uri.path.split('/');
-	uri.path = [];
-	for (i = 0; i < path_parts.length; i++) {
-		if (path_parts[i] == '.') {
-			continue;
-		} else if (path_parts[i] == '..') {
-			if (uri.path.length <= 1) { // first "/" creates an empty part
-				throw new Error('Invalid relative URI: too many parent ' +
-					'directory references (..).');
-			}
-			uri.path.pop();
-		} else {
-			uri.path.push(path_parts[i]);
-		}
-	}
-	uri.path = uri.path.join('/');
 		
 	if (uri.scheme == 'http' && uri.port == 80)
 		uri.port = null;
