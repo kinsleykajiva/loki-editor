@@ -8,6 +8,7 @@
   * Content that is pasted into the editing document now always receives all cleanups. ([http://code.google.com/p/loki-editor/issues/detail?id=96 #96])
   * Worked around the tendency of Mozilla to rewrite image URL's relative to the editor's location. ([http://code.google.com/p/loki-editor/issues/detail?id=99 #99])
   * Fixed an issue where images could not be inserted under Internet Explorer if the cursor was in a text node. ([http://code.google.com/p/loki-editor/issues/detail?id=100 #100])
+  * Fixed issues where clicking a part of the editing window that did not actually have any content in it would not place a carat in Firefox 3 ([http://code.google.com/p/loki-editor/issues/detail?id=103 #103]) and Internet Explorer ([http://code.google.com/p/loki-editor/issues/detail?id=104 #104]).
   * The contextual menu no longer disappears right after appearing in Firefox 3. ([http://code.google.com/p/loki-editor/issues/detail?id=92 #92])
   * Dialog contents no longer become visible before styles are applied to the window. ([http://code.google.com/p/loki-editor/issues/detail?id=93 #93])
   * Made the label of the "Edit source" button somewhat more clear. ([http://code.google.com/p/loki-editor/issues/detail?id=94 #94])
