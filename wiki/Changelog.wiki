@@ -1,6 +1,18 @@
 #summary A log of what changed in Loki in each release
 #labels Audience-Users,Audience-Installers,Featured
 
+==Loki 2.0 Release Candidate 6 _(July 18, 2008)_==
+  * A serious bug in an internal range function was causing image insertion to fail if there were more than one image after the insertion point and editing to fail if there were any images after the targeted one. ([http://code.google.com/p/loki-editor/issues/detail?id=113 #113])
+  * Named anchors that had content inside the A tag or other attributes (like href) were having them destroyed. ([http://code.google.com/p/loki-editor/issues/detail?id=106 #106])
+  * Fixed a bug that prevented images from being inserted into empty paragraphs under Internet Explorer. ([http://code.google.com/p/loki-editor/issues/detail?id=112 #112])
+  * Fixed automatic cleanup-on-paste under Firefox 3 and Internet Explorer. ([http://code.google.com/p/loki-editor/issues/detail?id=115 #115])
+  * Changed paragraph alignment to use CSS; previously it used the deprecated align attribute. ([http://code.google.com/p/loki-editor/issues/detail?id=114 #114])
+  * Loki now accepts a whitelist of acceptable inline styles; only styles not on that whitelist will be stripped. A small default list is built-in. ([http://code.google.com/p/loki-editor/issues/detail?id=108 #108])
+  * Changes to the options system in 2.0rc5 accidentally disabled the horizontal rule masseuse, which resulted in the remove button being left in saved documents. ([http://code.google.com/p/loki-editor/issues/detail?id=120 #120])
+  * The list of allowable tags no longer needs to be provided in upper case. ([http://code.google.com/p/loki-editor/issues/detail?id=119 #119])
+  * Fixed two bugs with unmassaging lists. ([http://code.google.com/p/loki-editor/issues/detail?id=121 #121] and [http://code.google.com/p/loki-editor/issues/detail?id=124 #124])
+  * The contextual menu now appears in the correct position under IE. ([http://code.google.com/p/loki-editor/issues/detail?id=90 #90])
+
 ==Loki 2.0 Release Candidate 5 _(July 16, 2008)_==
   * Revamped the [Options options system]. The public interface for common cases has not changed, although we now recommend the use of the new `"power"` set in place of `"all"`. ([http://code.google.com/p/loki-editor/issues/detail?id=102 #102])
   * Icons now properly appear with alpha blending in IE6. ([http://code.google.com/p/loki-editor/issues/detail?id=9 #9])
