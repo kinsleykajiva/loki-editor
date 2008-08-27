@@ -4,7 +4,7 @@
 Packaging and releasing Loki is a simple process, but many of its steps are easy to forget. Following this list will ensure that you remember all of them.
 
   # Update the [Changelog changelog] to reflect the new changes that have been made since the last release.
-  # Build the Loki tarballs and place them in the `packaging` directory on the testbed. You can do this by changing to the packaging directory, and then running `../tools/build -v [version] --with-source`.
+  # Build the Loki tarballs and place them in the `packaging` directory on the testbed. You can do this by changing to the packaging directory, and then running `../trunk/tools/build -v [version] --with-source`.
   # Extract the general-use tarball you just created into the `releases` directory.
   # In multiple browsers, do one last check to ensure that all changes are still working, and run the [http://jscrucible.googlecode.com/ Crucible] tests.
   # Tag the release as _release-`version`_ in Subversion.
