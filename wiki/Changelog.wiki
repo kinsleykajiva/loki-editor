@@ -1,6 +1,10 @@
 #summary A log of what changed in Loki in each release
 #labels Audience-Users,Audience-Installers,Featured
 
+==Loki 2.0 Release Candidate 7 _(August 26, 2008)_==
+  * Fixed a bug in the code that parses the `options` setting string. ([http://code.google.com/p/loki-editor/issues/detail?id=134 #134])
+  * Fixed a race condition where clipboard support could break. ([http://code.google.com/p/loki-editor/issues/detail?id=135 #135])
+  * Fixed the creation of extraneous paragraphs when pasting content into Internet Explorer. ([http://code.google.com/p/loki-editor/issues/detail?id=126 #126])
 ==Loki 2.0 Release Candidate 6 _(July 18, 2008)_==
   * A serious bug in an internal range function was causing image insertion to fail if there were more than one image after the insertion point and editing to fail if there were any images after the targeted one. ([http://code.google.com/p/loki-editor/issues/detail?id=113 #113])
   * Named anchors that had content inside the A tag or other attributes (like href) were having them destroyed. ([http://code.google.com/p/loki-editor/issues/detail?id=106 #106])
