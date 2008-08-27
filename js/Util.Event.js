@@ -41,20 +41,25 @@ Util.Event.listener = function(func)
  */
 Util.Event.add_event_listener = function(node, type, listener)
 {
-	if (!Util.is_valid_object(node)) {
-		throw new TypeError("Cannot listen for a '" + type + "' event on a " +
-			"non-object.");
-	} else if (!type || !listener) {
-		throw new Error("Must provide an event type and a callback function " +
-			"to add an event listener.");
-	}
-	
-	if (node.addEventListener) {
+	try
+	{
+		//bubble = bubble == null ? false : bubble;
+		//node.addEventListener(type, listener, bubble);
 		node.addEventListener(type, listener, false);
-	} else if (node.attachEvent) {
-		node.attachEvent('on' + type, listener);
-	} else {
-		throw new Util.Unsupported_Error('modern event handling');
+	}
+	catch(e)
+	{
+		try
+		{
+// 			node.attachEvent('on' + type, function() { listener(new Util.Event.DOM_Event(node)); });
+			node.attachEvent('on' + type, listener);
+		}
+		catch(f)
+		{
+			throw(new Error('Util.Event.add_event_listener(): Neither the W3C nor the IE way of adding an event listener worked. ' +
+							'When the W3C way was tried, an error with the following message was thrown: <<' + e.message + '>>. ' +
+							'When the IE way was tried, an error with the following message was thrown: <<' + f.message + '>>.'));
+		}
 	}
 };
 
@@ -68,7 +73,7 @@ Util.Event.add_event_listener = function(node, type, listener)
  */
 Util.Event.observe = function(target, type, listener, context)
 {
-	if (target.addEventListener) {
+	if (typeof(target.addEventListener) == 'function') {
 		if (context) {
 			target.addEventListener(type, function event_listener_proxy() {
 				listener.apply(context, arguments);
