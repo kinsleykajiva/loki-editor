@@ -47,7 +47,7 @@ To create editors with a different set of features than the default, you can twe
 </script>
 }}}
 
-There are several other [Settings settings] that can be edited. To create editors with power-user options that sanitize unsecured images when Loki is served over HTTP, you can write:
+There are several other [Settings settings] that can be edited. To create editors with power-user options that sanitize unsecured images when Loki is served over HTTPS, you can write:
 {{{
 <script type="text/javascript" charset="utf-8">
    Loki.convert_all_textareas({options: "power", sanitize_unsecured: true});
