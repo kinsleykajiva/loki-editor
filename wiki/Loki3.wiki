@@ -10,7 +10,7 @@ Loki 3 is the version of Loki currently being developed in the trunk. Its aim is
     * Plugins that were requested but not built in to Loki are automatically downloaded from the server. A "loading" context displays while this is in progress.
     * It should be possible to implement CMS integration as a separate plugin that makes modifications to the linking and image-insertion plugins.
   * *Localization*
-    * In Loki 2, all user-visible strings are hard-coded, and only available in US English. Loki 3 includes a full localization system. Plugins define localization strings in an easily-parsed format, and these `strings` files are compiled to! JavaScript by the Loki build process.
+    * In Loki 2, all user-visible strings are hard-coded, and only available in US English. Loki 3 includes a full localization system. Plugins define localization strings in an easily-parsed format, and these `strings` files are compiled to !JavaScript by the Loki build process.
     * Loki locales include support for inflecting nouns based on number; necessary because some languages go well beyond singular/plural, and some languages make little distinction.
     * Loki locales include date and time formatting.
   * *Browser Support*
