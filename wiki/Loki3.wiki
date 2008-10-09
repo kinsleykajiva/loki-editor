@@ -1,7 +1,7 @@
 #summary An overview of the goals for Loki 3.
 #labels Phase-Design,Audience-Developers
 
-Loki 3 is the version of Loki currently being developed in the trunk. Its aim is to address Loki 2's shortcomings, and make Loki more attractive as an open-source project: a serious competitor to FCKeditor and TinyMCE.
+[https://eric.test.carleton.edu/dev/loki3/ Loki 3] is the version of Loki currently being developed in the trunk. Its aim is to address Loki 2's shortcomings, and make Loki more attractive as an open-source project: a serious competitor to FCKeditor and TinyMCE.
 
 ==What's better in Loki 3==
   * *Powerful Plugins*
@@ -23,3 +23,4 @@ Loki 3 is the version of Loki currently being developed in the trunk. Its aim is
   * *Better OOP.* Loki 3's OOP paradigm is more explicit and easy to understand than Loki 2's, and, because it makes use of !JavaScript `prototype` objects, is faster at runtime, especially when inheritance is used.
   * *Third-party utility library.* Instead of providing all cross-browser support on its own, Loki 3 defers to the excellent [http://base2.googlecode.com/ base2] library by [http://dean.edwards.name Dean Edwards]. base2 patches browser objects to bring them in compliance with Web standards; for example, in IE, `addEventListener` and its cousins magically appear.
   * *All packaged up.* Almost all Loki code lives within the `Loki` global object, minimizing potential conflicts. Because Loki 2 defines a `UI` object, it will possibly conflict with, e.g., [http://www.prototype-ui.com/ Prototype UI].
+  * *TinyMCE excised.* Loki no longer depends on any TinyMCE code.
