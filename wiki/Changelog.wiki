@@ -1,6 +1,15 @@
 #summary A log of what changed in Loki in each release
 #labels Audience-Users,Audience-Installers,Featured
 
+==Loki 2.0 Release Candidate 9 _(October 14, 2008)_==
+  * Comments will now no longer be stripped from Loki documents if "!" is added to the list of allowable tags. ([http://code.google.com/p/loki-editor/issues/detail?id=143 #143])
+  * Trying to access the clipboard using the shortcut keys on Windows Gecko-based browsers no longer producing a misleading error message. ([http://code.google.com/p/loki-editor/issues/detail?id=130 #130])
+  * Block-level tags will no longer be converted to paragraphs if the entire document is selected. ([http://code.google.com/p/loki-editor/issues/detail?id=137 #137])
+  * Worked around a Gecko bug/quirk that caused the optional indenting HTML generator to die when given a document containing an `object` tag. ([http://code.google.com/p/loki-editor/issues/detail?id=144 #144])
+  * The optional HTML generator no longer mangles named HTML entities. ([http://code.google.com/p/loki-editor/issues/detail?id=139 #139])
+  * The link dialog now correctly loads links from RSS in the background, even if an external link is being edited. ([http://code.google.com/p/loki-editor/issues/detail?id=141 #141])
+  * Fixed a bug that prevented Loki from parsing URL's that contained port numbers. ([http://code.google.com/p/loki-editor/issues/detail?id=142 #142])
+
 ==Loki 2.0 Release Candidate 8 _(September 3, 2008)_==
   * Loki now has the (experimental) ability to indent and prettify its HTML output. This is off by default, and is controlled by a new `html_generator` [Settings setting]. ([http://code.google.com/p/loki-editor/issues/detail?id=41 #41])
   * Fixed some weird scrolling behavior under Mozilla. ([http://code.google.com/p/loki-editor/issues/detail?id=125 #125])
