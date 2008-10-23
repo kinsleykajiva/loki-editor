@@ -1,0 +1,10 @@
+#summary Features that still need to be implemented for Loki 3
+#labels Audience-Developers,Phase-Design
+
+===Core===
+  * Themes
+    * Basic inheritance (custom themes inherit from "light" or "dark").
+    * Allowing plugins to add styles.
+  * Cleanup / filters / masseuses.
+  * Fake elements.
+  * Dialogs, and associated elements.
