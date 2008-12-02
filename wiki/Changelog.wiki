@@ -1,6 +1,15 @@
 #summary A log of what changed in Loki in each release
 #labels Audience-Users,Audience-Installers,Featured
 
+==Loki 2.0.1 _(December 2, 2008)_==
+  * Loki can now send [CrashReports crash reports] to a server-side script. ([http://code.google.com/p/loki-editor/issues/detail?id=156 #156])
+  * When CMS integration is in use, links to items not found by the finder feed no longer use their titles when edited. ([http://code.google.com/p/loki-editor/issues/detail?id=151 #151])
+  * Characters with special meaning in HTML are now properly encoded by Loki's HTML generator. ([http://code.google.com/p/loki-editor/issues/detail?id=153 #153])
+  * Links to anchors on the same page are now left in a fully-relative form. ([http://code.google.com/p/loki-editor/issues/detail?id=154 #154])
+  * Fixed an issue where pressing Backspace at the beginning of a paragraph could cause that paragraph to be effectively deleted. ([http://code.google.com/p/loki-editor/issues/detail?id=155 #155])
+  * When editing a named anchor, the `id` attribute is now also updated if it is present. ([http://code.google.com/p/loki-editor/issues/detail?id=149 #149])
+  * Loki now prevents Gecko browsers from making links relative to the editor's domain. ([http://code.google.com/p/loki-editor/issues/detail?id=148 #148])
+
 ==Loki 2.0 Release Candidate 9 _(October 14, 2008)_==
   * Comments will now no longer be stripped from Loki documents if "!" is added to the list of allowable tags. ([http://code.google.com/p/loki-editor/issues/detail?id=143 #143])
   * Trying to access the clipboard using the shortcut keys on Windows Gecko-based browsers no longer producing a misleading error message. ([http://code.google.com/p/loki-editor/issues/detail?id=130 #130])
