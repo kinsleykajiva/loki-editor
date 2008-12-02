@@ -3,6 +3,8 @@
 
 Loki can submit a "crash report" whenever an exception prevents Loki from switching to source view or submitting the editing document. Loki will post the crash report as a JSON object (with a Content-Type of `application/json`) to the script you specify in the `crash_report_uri` setting. The format of the posted object is detailed below.
 
+The JSON that Loki produces is formatted and indented, making it easily readable by humans.
+
 || *version* || The version of Loki that produced the crash report. ||
 || *report_version* || The version of the crash report format (1.0). The major version will not be incremented unless a breaking change is made. Minor version increases will always reflect a backwards-compatible change. ||
 || *user_agent* || The browser's user agent string (the value of `navigator.userAgent`). ||
