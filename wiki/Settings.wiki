@@ -1,5 +1,5 @@
 #summary A reference of Loki settings
-#labels Audience-Installers
+#labels Audience-Installers,Phase-Deploy
 
 Loki has many settings to customize its behavior that can be passed to `UI.Loki.init()`. A reference table is given below; for information how to pass these settings in, see [Initialization the article on initializing Loki]. All settings are optional.
 
@@ -7,7 +7,7 @@ Loki has many settings to customize its behavior that can be passed to `UI.Loki.
 || allowable_tags || array || An array of allowed HTML tags. Loki will remove any tags from the document that do not appear in this list. If this is not specified, a fairly permissive default list that is built-in to Loki will be used. ||
 || allowable_styles || array || An array of allowed inline styles (all others will be stripped). If this is not specified, only `text-align`, `vertical-align`, `float`, `direction`, `display`, `clear`, and `list-style` will be allowed. ||
 || base_uri || string || The URL of the Loki folder. Loki uses this to pull in icons, CSS files, etc. Loki will attempt to detect the correct value for this automatically, but in some cases it may need to be given explicitly. ||
-|| crash_report_uri || string || The URL to which [CrashReports crash reports] will be sent. ||
+|| crash_report_uri || string || The URL to which [CrashReports crash reports] will be sent. Crash reports were added in Loki 2.0.1. ||
 || default_site_regexp || regexp || A regular expression that matches the default site to link to. For more information, see [CMSIntegration the article on CMS integration]. ||
 || default_type_regexp || regexp || A regular expression that matches the default type that can be linked to. For more information, see [CMSIntegration the article on CMS integration]. ||
 || disallow_image_sizes || boolean || Most browsers allow images in the document to be resized, but if `disallow_image_sizes` is set to true, the edited sizes will be stripped out when the document is saved. Defaults to `false`. ||
