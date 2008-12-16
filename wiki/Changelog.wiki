@@ -3,7 +3,7 @@
 
 ==Loki 2.0.1 _(December 2, 2008)_==
   * Loki can now send [CrashReports crash reports] to a server-side script. ([http://code.google.com/p/loki-editor/issues/detail?id=156 #156])
-  * When CMS integration is in use, links to items not found by the finder feed no longer use their titles when edited. ([http://code.google.com/p/loki-editor/issues/detail?id=151 #151])
+  * When CMS integration is in use, links to items not found by the finder feed no longer lose their titles when edited. ([http://code.google.com/p/loki-editor/issues/detail?id=151 #151])
   * Characters with special meaning in HTML are now properly encoded by Loki's HTML generator. ([http://code.google.com/p/loki-editor/issues/detail?id=153 #153])
   * Links to anchors on the same page are now left in a fully-relative form. ([http://code.google.com/p/loki-editor/issues/detail?id=154 #154])
   * Fixed an issue where pressing Backspace at the beginning of a paragraph could cause that paragraph to be effectively deleted. ([http://code.google.com/p/loki-editor/issues/detail?id=155 #155])
