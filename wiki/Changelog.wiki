@@ -1,6 +1,15 @@
 #summary A log of what changed in Loki in each release
 #labels Audience-Users,Audience-Installers,Featured
 
+==Loki 2.0.2 _(December 17, 2008)_==
+  * An error prevented Loki from adding images that were not secured with HTTPS when they were not added from the CMS-integrated list. ([http://code.google.com/p/loki-editor/issues/detail?id=163 #163])
+  * Creating a link across multiple blocks now works properly. ([http://code.google.com/p/loki-editor/issues/detail?id=140 #140])
+  * Loki's optional indenting HTML generator did not escape quote (`"`) characters in attribute values. ([http://code.google.com/p/loki-editor/issues/detail?id=160 #160])
+  * Custom link titles were being overwritten when the link was edited and it was found via CMS integration with the CMS-provided title. ([http://code.google.com/p/loki-editor/issues/detail?id=159 #159])
+  * Loki's HTML generator now always preserves the original source ordering of element attributes. ([http://code.google.com/p/loki-editor/issues/detail?id=161 #161])
+  * Clipboard toolbar support for Gecko browsers is now totally neutered; it hasn't worked since Firefox 3 anyway. ([http://code.google.com/p/loki-editor/issues/detail?id=91 #91])
+  * CMS integration: Loki now supports a "selector_text" attribute on linkable items. If present, the text in this element will be used to represent the item in the dropdown box instead of its title. This allows, for example, hierarchical views of content to be presented. ([http://code.google.com/p/loki-editor/issues/detail?id=158 #158])
+
 ==Loki 2.0.1 _(December 2, 2008)_==
   * Loki can now send [CrashReports crash reports] to a server-side script. ([http://code.google.com/p/loki-editor/issues/detail?id=156 #156])
   * When CMS integration is in use, links to items not found by the finder feed no longer lose their titles when edited. ([http://code.google.com/p/loki-editor/issues/detail?id=151 #151])
