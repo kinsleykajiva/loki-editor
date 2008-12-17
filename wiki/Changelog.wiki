@@ -1,7 +1,8 @@
 #summary A log of what changed in Loki in each release
 #labels Audience-Users,Audience-Installers,Featured
 
-==Loki 2.0.2 _(December 17, 2008)_==
+==Loki [http://github.com/enaeseth/loki/tree/2.0 HEAD] _(as of December 17, 2008)_==
+  * Loki no longer mangles links to email addresses in documents. ([http://code.google.com/p/loki-editor/issues/detail?id=164 #164])
   * An error prevented Loki from adding images that were not secured with HTTPS when they were not added from the CMS-integrated list. ([http://code.google.com/p/loki-editor/issues/detail?id=163 #163])
   * Creating a link across multiple blocks now works properly. ([http://code.google.com/p/loki-editor/issues/detail?id=140 #140])
   * Loki's optional indenting HTML generator did not escape quote (`"`) characters in attribute values. ([http://code.google.com/p/loki-editor/issues/detail?id=160 #160])
