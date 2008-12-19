@@ -4,10 +4,16 @@
 ==Loki [http://github.com/enaeseth/loki/tree/2.0 HEAD] _(as of December 17, 2008)_==
   * Loki no longer mangles links to email addresses in documents. ([http://code.google.com/p/loki-editor/issues/detail?id=164 #164])
   * An error prevented Loki from adding images that were not secured with HTTPS when they were not added from the CMS-integrated list. ([http://code.google.com/p/loki-editor/issues/detail?id=163 #163])
+  * A bug was introduced in 2.0.1 that stripped the protocol off of links and image sources, even if their locations were on different domains than the editor. ([http://code.google.com/p/loki-editor/issues/detail?id=166 #166])
   * Creating a link across multiple blocks now works properly. ([http://code.google.com/p/loki-editor/issues/detail?id=140 #140])
   * Loki's optional indenting HTML generator did not escape quote (`"`) characters in attribute values. ([http://code.google.com/p/loki-editor/issues/detail?id=160 #160])
+  * Loki now accepts any inline CSS rules that _begin with_ an entry in the `acceptable_inline_styles` setting. This means that, for example, allowing `border` will now also allow `border-width`, `border-color`, etc.  ([http://code.google.com/p/loki-editor/issues/detail?id=168 #168])
   * Custom link titles were being overwritten when the link was edited and it was found via CMS integration with the CMS-provided title. ([http://code.google.com/p/loki-editor/issues/detail?id=159 #159])
   * Loki's HTML generator now always preserves the original source ordering of element attributes. ([http://code.google.com/p/loki-editor/issues/detail?id=161 #161])
+  * The behavior of comment stripping was fixed: comments were previously stripped if "!" _was_ an allowable tag.  ([http://code.google.com/p/loki-editor/issues/detail?id=167 #167])
+  * Loki now permits `list-style` and friends in inline styles by default.  ([http://code.google.com/p/loki-editor/issues/detail?id=169 #169])
+  * Loki now removes empty Microsoft Word-generated paragraphs, even if they contain newline characters.  ([http://code.google.com/p/loki-editor/issues/detail?id=170 #170])
+  * Microsoft Word section classes are now removed even if the `div` element to which they are applied is not. ([http://code.google.com/p/loki-editor/issues/detail?id=171 #171])
   * Clipboard toolbar support for Gecko browsers is now totally neutered; it hasn't worked since Firefox 3 anyway. ([http://code.google.com/p/loki-editor/issues/detail?id=91 #91])
   * CMS integration: Loki now supports a "selector_text" attribute on linkable items. If present, the text in this element will be used to represent the item in the dropdown box instead of its title. This allows, for example, hierarchical views of content to be presented. ([http://code.google.com/p/loki-editor/issues/detail?id=158 #158])
 
