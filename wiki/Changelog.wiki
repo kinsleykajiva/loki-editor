@@ -1,7 +1,7 @@
 #summary A log of what changed in Loki in each release
 #labels Audience-Users,Audience-Installers,Featured
 
-==Loki [http://github.com/enaeseth/loki/tree/2.0 HEAD] _(as of December 17, 2008)_==
+==Loki 2.0.2 _(December 30, 2008)_==
   * Loki no longer mangles links to email addresses in documents. ([http://code.google.com/p/loki-editor/issues/detail?id=164 #164])
   * An error prevented Loki from adding images that were not secured with HTTPS when they were not added from the CMS-integrated list. ([http://code.google.com/p/loki-editor/issues/detail?id=163 #163])
   * A bug was introduced in 2.0.1 that stripped the protocol off of links and image sources, even if their locations were on different domains than the editor. ([http://code.google.com/p/loki-editor/issues/detail?id=166 #166])
