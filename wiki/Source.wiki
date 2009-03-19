@@ -3,6 +3,6 @@
 
 [http://github.com/ http://github.com/images/modules/header/logo.png]
 
-Loki's source code is not managed through Google Code, but instead hosted at [http://github.com/enaeseth/loki GitHub] and uses [http://git.or.cz Git] as its source control system.
+Loki's source code is not managed through Google Code, but instead hosted at [http://github.com/enaeseth/loki/ GitHub] and uses [http://git-scm.com/ Git] as its source control system.
 
-Anyone can clone the Loki Git repository locally by running `git clone git://github.com/enaeseth/loki.git`, but if you would possibly like to contribute your changes back to the official Loki distribution, it's easiest to make a fork on !GitHub. Just visit [http://github.com/enaeseth/loki Loki's GitHub project page] and hit "fork"!
+Anyone can clone the Loki Git repository locally by running `git clone git://github.com/enaeseth/loki.git`, but if you would possibly like to contribute your changes back to the official Loki distribution, it's easiest to make a fork on !GitHub. Just visit [http://github.com/enaeseth/loki/ Loki's GitHub project page] and hit "fork"!
