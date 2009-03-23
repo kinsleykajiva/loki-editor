@@ -1,6 +1,18 @@
 #summary A log of what changed in Loki in each release
 #labels Audience-Users,Audience-Installers,Featured
 
+==Loki 2.0.3 _(Coming Soon)_==
+  * Loki no longer fails to open documents that have empty tables. ([http://code.google.com/p/loki-editor/issues/detail?id=176 #176])
+  * Loki can now create documents with `<pre>` tags when using its indenting HTML generator. ([http://code.google.com/p/loki-editor/issues/detail?id=172 #172])
+  * Loki will now clean up `<br />` tags at the end of list items and table cells, as well as paragraphs, etc. ([http://code.google.com/p/loki-editor/issues/detail?id=173 #173])
+  * Deleting the placeholder for a named anchor will now delete the anchor itself. ([http://code.google.com/p/loki-editor/issues/detail?id=152 #152])
+  * Improved the experience of deleting an anchor using Delete or Backspace. ([http://code.google.com/p/loki-editor/issues/detail?id=183 #183])
+  * Loki now avoids the non-breaking space characters that are used to hold open empty paragraphs. ([http://code.google.com/p/loki-editor/issues/detail?id=177 #177])
+  * Loki will warn the user when creating an empty link (e.g., `http://`). ([http://code.google.com/p/loki-editor/issues/detail?id=178 #178])
+  * Vastly improved the presentation of the warnings for potentially invalid links. ([http://code.google.com/p/loki-editor/issues/detail?id=184 #184])
+  * The shortcut key for underlining text has been fixed. ([http://code.google.com/p/loki-editor/issues/detail?id=179 #179])
+  * Improved the check to make sure the user is not indenting the first item in a list. ([http://code.google.com/p/loki-editor/issues/detail?id=182 #182])
+
 ==Loki 2.0.2 _(December 30, 2008)_==
   * Loki no longer mangles links to email addresses in documents. ([http://code.google.com/p/loki-editor/issues/detail?id=164 #164])
   * An error prevented Loki from adding images that were not secured with HTTPS when they were not added from the CMS-integrated list. ([http://code.google.com/p/loki-editor/issues/detail?id=163 #163])
