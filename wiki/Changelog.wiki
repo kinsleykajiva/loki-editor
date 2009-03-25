@@ -4,7 +4,7 @@
 ==Loki 2.0.3 _(Coming Soon)_==
   * Loki no longer fails to open documents that have empty tables. ([http://code.google.com/p/loki-editor/issues/detail?id=176 #176])
   * Loki can now create documents with `<pre>` tags when using its indenting HTML generator. ([http://code.google.com/p/loki-editor/issues/detail?id=172 #172])
-  * `div` elements with no classes are no longer wantonly stripped ([http://code.google.com/p/loki-editor/issues/detail?id=174 #174]
+  * `div` elements with no classes are no longer wantonly stripped ([http://code.google.com/p/loki-editor/issues/detail?id=174 #174])
   * Loki will now clean up `<br />` tags at the end of list items and table cells, as well as paragraphs, etc. ([http://code.google.com/p/loki-editor/issues/detail?id=173 #173])
   * Deleting the placeholder for a named anchor will now delete the anchor itself. ([http://code.google.com/p/loki-editor/issues/detail?id=152 #152])
   * Improved the experience of deleting an anchor using Delete or Backspace. ([http://code.google.com/p/loki-editor/issues/detail?id=183 #183])
