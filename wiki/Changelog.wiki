@@ -1,7 +1,7 @@
 #summary A log of what changed in Loki in each release
 #labels Audience-Users,Audience-Installers,Featured
 
-==Loki 2.0.3 _(Coming Soon)_==
+==Loki 2.0.3 _(April 9, 2009)_==
   * Loki no longer fails to open documents that have empty tables. ([http://code.google.com/p/loki-editor/issues/detail?id=176 #176])
   * Loki can now create documents with `<pre>` tags when using its indenting HTML generator. ([http://code.google.com/p/loki-editor/issues/detail?id=172 #172])
   * `div` elements with no classes are no longer wantonly stripped ([http://code.google.com/p/loki-editor/issues/detail?id=174 #174])
