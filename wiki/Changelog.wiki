@@ -1,6 +1,16 @@
 #summary A log of what changed in Loki in each release
 #labels Audience-Users,Audience-Installers,Featured
 
+==Loki 2.1.0a1 _(Not yet released)_==
+  * Support for !WebKit-based browsers like Safari and Chrome ([http://code.google.com/p/loki-editor/issues/detail?id=1 #1])
+  * Extensible component architecture ([http://code.google.com/p/loki-editor/issues/detail?id=192 #192])
+  * More modern appearance ([http://code.google.com/p/loki-editor/issues/detail?id=193 #193])
+  * Loki no longer conflicts with Prototype ([http://code.google.com/p/loki-editor/issues/detail?id=194 #194])
+
+==Loki 2.0.4 _(January 12, 2010)_==
+  * Improved compatibility with Internet Explorer 8
+  * Fixes and improvements to the indenting HTML generator
+
 ==Loki 2.0.3 _(April 9, 2009)_==
   * Loki no longer fails to open documents that have empty tables. ([http://code.google.com/p/loki-editor/issues/detail?id=176 #176])
   * Loki can now create documents with `<pre>` tags when using its indenting HTML generator. ([http://code.google.com/p/loki-editor/issues/detail?id=172 #172])
