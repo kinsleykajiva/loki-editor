@@ -1,0 +1,18 @@
+Loki has many settings to customize its behavior that can be passed to `UI.Loki.init()`. A reference table is given below; for information how to pass these settings in, see [the article on initializing Loki](Initialization.md). All settings are optional.
+
+| **Name** | **Type** | **Description** |
+|:---------|:---------|:----------------|
+| allowable\_tags | array    | An array of allowed HTML tags. Loki will remove any tags from the document that do not appear in this list. If this is not specified, a fairly permissive default list that is built-in to Loki will be used. Include an exclamation mark ("!") in the array to allow comments. |
+| allowable\_styles | array    | An array of allowed inline styles (all others will be stripped). If this is not specified, only `text-align`, `vertical-align`, `float`, `direction`, `display`, `clear`, and `list-style` will be allowed. |
+| base\_uri | string   | The URL of the Loki folder. Loki uses this to pull in icons, CSS files, etc. Loki will attempt to detect the correct value for this automatically, but in some cases it may need to be given explicitly. |
+| crash\_report\_uri | string   | The URL to which [crash reports](CrashReports.md) will be sent. Crash reports were added in Loki 2.0.1. |
+| default\_site\_regexp | regexp   | A regular expression that matches the default site to link to. For more information, see [the article on CMS integration](CMSIntegration.md). |
+| default\_type\_regexp | regexp   | A regular expression that matches the default type that can be linked to. For more information, see [the article on CMS integration](CMSIntegration.md). |
+| disallow\_image\_sizes | boolean  | Most browsers allow images in the document to be resized, but if `disallow_image_sizes` is set to true, the edited sizes will be stripped out when the document is saved. Defaults to `false`. |
+| finder\_feed | string   | The URL to be pulled up to determine the site and type of a link. For more information, see [the article on CMS integration](CMSIntegration.md). |
+| html\_generator | string   | Sets who is responsible for generating the HTML for documents being edited. If this is set to `"loki"`, Loki will generate readable, indented HTML; if set to `"browser"`, Loki will rely on the browser to generate HTML, who will not do anything to make the resulting code more readable. Loki's HTML generation is still experimental, so the default is `"browser"`. |
+| images\_feed | string   | The RSS feed of available images. For more information, see [the article on CMS integration](CMSIntegration.md). |
+| options  | string   | A selector string that specifies which [options](Options.md) should be included in Loki. See [the options article](Options.md) for how to set this value. Defaults to `"default"`. |
+| sanitize\_unsecured | boolean  | When Loki is loaded over `https` and the document it is editing contains images loaded over unencrypted `http`, most browsers will complain of a security threat. If `sanitize_unsecured` is set to true, these images will be replaced with placeholders that will not trigger the security warning. Defaults to `false`. (Note that if the image is on the same host as Loki, Loki will simply try to load the images over `https`, regardless of the state of this setting.) |
+| sites\_feed | string   | The RSS feed of available sites. For more information, see [the article on CMS integration](CMSIntegration.md). |
+| use\_xhtml | boolean  | Cleans up the browser-generated HTML to always be in XHTML format. Note that this doesn't do rigorous validation, but merely does simple corrections like ensuring that tags are in lower case and self-closing tags get a closing slash (/). Defaults to `false`. |
